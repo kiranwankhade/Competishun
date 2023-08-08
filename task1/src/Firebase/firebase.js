@@ -49,7 +49,6 @@ const signInWithGoogle = async () => {
     const userDetails = await fetch('https://glossy-nifty-market.glitch.me/competishunUsers');
     const data = await userDetails.json();
 
-    // const data = JSON.parse(localStorage.getItem("users"));
     console.log('userDetails:', data)
 
     if(data.length === 0){
@@ -79,7 +78,6 @@ const signInWithGoogle = async () => {
 
       }
 
-      // localStorage.setItem("users",JSON.stringify(obj));
     }else{
       data.map((el) => {
         if(el.email !== user.email){
@@ -108,29 +106,11 @@ const signInWithGoogle = async () => {
             console.log('err:', err)
           }
 
-          // data.push(obj)
-          // localStorage.setItem("users",JSON.stringify(data));
         }
       })
       
     }
 
-    // let arr = [];
-
-    // let obj = {
-    //   uid: user.uid,
-    //   name: user.displayName,
-    //   authProvider: "google",
-    //   email: user.email,
-    //   photoURL:user.photoURL,
-    //   favorites: [],
-    //   watchList:[]
-    // } 
-
-    // // arr.push(obj)
-
-    // localStorage.setItem("userDetails",JSON.stringify(obj));
-   
     
     if (docs.docs.length === 0) {
       await addDoc(collection(db, "users"), {
@@ -166,26 +146,6 @@ const registerWithEmailAndPassword = async (name, email, password) => {
     const userDetails = await fetch('https://glossy-nifty-market.glitch.me/competishunUsers');
     const data = await userDetails.json();
 
-    // const data = JSON.parse(localStorage.getItem("users"));
-
-
-    // let arr = [];
-
-    // let obj = {
-    //   uid: user.uid,
-    //   name: name,
-    //   authProvider: "local",
-    //   email: email,
-    //   photoURL:"https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png",
-    //   favorites:[],
-    //   watchList:[]
-    // } 
-
-    // arr.push(obj)
-
-    // localStorage.setItem("userDetails",JSON.stringify(arr));
-    
-
     if(data.length === 0){
       let obj = {
         uid: user.uid,
@@ -211,7 +171,6 @@ const registerWithEmailAndPassword = async (name, email, password) => {
 
       })
 
-      // localStorage.setItem("users",JSON.stringify(obj));
     }else{
       data.map((el) => {
         if(el.email !== user.email){
@@ -239,9 +198,6 @@ const registerWithEmailAndPassword = async (name, email, password) => {
           }catch(err){
             console.log('err:', err)
           }
-
-          // data.push(obj)
-          // localStorage.setItem("users",JSON.stringify(data));
         }
       })
     }
@@ -258,7 +214,6 @@ const registerWithEmailAndPassword = async (name, email, password) => {
    
   } catch (err) {
     console.error(err);
-    // alert(err.message);
   }
 };
 
