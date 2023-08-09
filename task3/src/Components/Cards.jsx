@@ -41,7 +41,6 @@ const Cards = ({ el }) => {
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
                 verticalAlign={"center"}
-                onClick={()=>navigate(`/singlepage/${Math.floor(el.recipe.calories)}`)}
                 />
                 <Stack mt='6' spacing='3'>
                 <Heading size='sm' textAlign={"center"}>{el.recipe.label}</Heading>

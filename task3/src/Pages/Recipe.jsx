@@ -39,25 +39,25 @@ const Recipe = () => {
         <br/>
         <Center><Heading color={'#4285f4'}>Recipe App</Heading></Center>
         <br/>
-        <Box display={"flex"} flexDirection={{sm:'column' ,md:'row',lg:'row'}} justifyContent={"flex-end"} alignContent={'flex-end'} alignItems={'flex-end'} w="95%" m={'auto'} gap={'10'}>
+        <Box display={"flex"} flexDirection={{base:'row',sm:'column' ,md:'row',lg:'row'}} justifyContent={"flex-end"} alignContent={'center'} alignItems={'center'} w="95%" m={'auto'} gap={'10'}>
             <Box>
-                <Input  type="text" placeholder='Search movies' htmlSize={"50"} width='auto' bg={"white"} onChange={(e)=>setSearch(e.target.value)} display={{sm:"none",lg:"block"}}/>
+                <Input  type="text" placeholder='Search Recipe' htmlSize={{base:'50',sm:'30' ,md:'40',lg:'50'}} width='auto' bg={"white"} onChange={(e)=>setSearch(e.target.value)}/>
             </Box>
-            <Box  paddingLeft={"20px"}>
-          <Menu>
-            <MenuButton as={Button} rightIcon={<AiOutlineDown />}>
-              Curise Type: {cusType}
-            </MenuButton>
-            <MenuList onClick={(e)=>setCusType(e.target.value)}>
-              <MenuItem value={"Indian"}>Indian</MenuItem>
-              <MenuItem value={"Chinese"}>Chinese</MenuItem>
-              <MenuItem value={"French"}>French</MenuItem>
-              <MenuItem value={"Mexican"}>Mexican</MenuItem>
-              <MenuItem value={"Asian"}>Asian</MenuItem>
-            </MenuList>
-          </Menu>
-        </Box>
-            <Box  display={"flex"} justifyContent={"flex-end"} alignContent={'flex-end'} alignItems={'flex-end'} w="95%" gap={'10'} >
+            <Box>
+                <Menu>
+                    <MenuButton as={Button} rightIcon={<AiOutlineDown />}>
+                    Curise Type: {cusType}
+                    </MenuButton>
+                    <MenuList onClick={(e)=>setCusType(e.target.value)}>
+                    <MenuItem value={"Indian"}>Indian</MenuItem>
+                    <MenuItem value={"Chinese"}>Chinese</MenuItem>
+                    <MenuItem value={"French"}>French</MenuItem>
+                    <MenuItem value={"Mexican"}>Mexican</MenuItem>
+                    <MenuItem value={"Asian"}>Asian</MenuItem>
+                    </MenuList>
+                </Menu>
+            </Box>
+            <Box  display={"flex"} justifyContent={{base:"flex-end",lg:"flex-end",sm:'center',md:'center'}} alignContent={'center'} alignItems={'center'} w="95%" gap={'10'} >
                 <Button isDisabled={page===1} onClick={()=>setPage(page-1)}>Prev</Button>
                 <Button>{page}</Button>
                 <Button isDisabled={recipe?.total_pages===page} onClick={()=>setPage(page+1)}>Next</Button>
