@@ -1,27 +1,19 @@
 import {
   Box,
   Button,
-  ButtonGroup,
   Card,
   CardBody,
-  CardFooter,
   CircularProgress,
   CircularProgressLabel,
-  Divider,
   Heading,
   Image,
   Stack,
-  Text,
   useToast,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../Firebase/firebase";
 
 const Cards = ({ el }) => {
-  const [user, loading, error] = useAuthState(auth);
-
 
   const navigate = useNavigate();
   const toast = useToast()

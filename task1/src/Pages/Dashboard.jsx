@@ -10,7 +10,6 @@ const Dashboard = () => {
     return (
         <Box>
             {!user ? <Navigate to="/login" /> :  <Movie/>}
-            {/* <BottomNav/> */}
         </Box>
       )
   

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Card, CardBody, CardFooter, Center, CircularProgress, CircularProgressLabel, Heading, Image, Menu, MenuButton, MenuItem, MenuList, Stack } from '@chakra-ui/react'
+import { Box, Button,Center, Heading, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import 'react-circular-progressbar/dist/styles.css';
 import { AiOutlineDown } from "react-icons/ai";

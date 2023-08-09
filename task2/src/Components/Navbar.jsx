@@ -30,7 +30,6 @@ export default function Navbar() {
   const navigate = useNavigate()
 
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>

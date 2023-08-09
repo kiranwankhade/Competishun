@@ -2,8 +2,6 @@ import {
     Box,
     Button,
     Heading,
-    Image,
-    Stack,
     Text,
     useToast,
     Modal,
@@ -18,10 +16,7 @@ import {
   } from "@chakra-ui/react";
   import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
   import Slider from 'react-slick'
-  import React, { useEffect, useState } from "react";
-  import { useAuthState } from "react-firebase-hooks/auth";
-  import { useNavigate } from "react-router-dom";
-  import { auth } from "../Firebase/firebase";
+  import React, {useState } from "react";
 import StarRatings from "../Pages/StarRatings";
 
 import 'slick-carousel/slick/slick.css';
@@ -33,7 +28,6 @@ import hotel3 from "../Assets/hotel3.jpg"
 import hotel4 from "../Assets/hotel4.jpg"
   
   const Cards = ({ el }) => {
-    const [user, loading, error] = useAuthState(auth);
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [slider, setSlider] = useState('');

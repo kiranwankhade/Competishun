@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Tab, TabList, Tabs, Stack,AspectRatio, Flex  } from '@chakra-ui/react';
+import { Box, Tab, TabList, Tabs, Flex  } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import { logout } from '../Firebase/firebase';
 
