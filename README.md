@@ -39,7 +39,6 @@ This Project Having Three Different Tasks
 ## Installation & Getting started
 Detailed instructions on how to install, configure, and get the project running.
 
-
 ```bash
 npm install Competishun
 #Task1
